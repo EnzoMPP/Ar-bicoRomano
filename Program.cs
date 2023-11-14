@@ -119,6 +119,7 @@ internal class Program
                 {
                     Console.WriteLine("Informe um valor dentro do intervalo");
                     valor=Convert.ToInt32(Console.ReadLine());
+                    valor2=Convert.ToInt32(Math.Round(valor,0));
                 }
                 Console.Write("O número arábico informado, em romano é: ");
                 Console.Write(milhares[valor2/1000]);
