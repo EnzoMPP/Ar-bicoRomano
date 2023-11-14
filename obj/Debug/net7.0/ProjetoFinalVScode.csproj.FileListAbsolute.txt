@@ -1,0 +1,14 @@
+C:\estágio\ProjetoFinalVScode\bin\Debug\net7.0\ProjetoFinalVScode.exe
+C:\estágio\ProjetoFinalVScode\bin\Debug\net7.0\ProjetoFinalVScode.deps.json
+C:\estágio\ProjetoFinalVScode\bin\Debug\net7.0\ProjetoFinalVScode.runtimeconfig.json
+C:\estágio\ProjetoFinalVScode\bin\Debug\net7.0\ProjetoFinalVScode.dll
+C:\estágio\ProjetoFinalVScode\bin\Debug\net7.0\ProjetoFinalVScode.pdb
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\ProjetoFinalVScode.GeneratedMSBuildEditorConfig.editorconfig
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\ProjetoFinalVScode.AssemblyInfoInputs.cache
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\ProjetoFinalVScode.AssemblyInfo.cs
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\ProjetoFinalVScode.csproj.CoreCompileInputs.cache
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\ProjetoFinalVScode.dll
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\refint\ProjetoFinalVScode.dll
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\ProjetoFinalVScode.pdb
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\ProjetoFinalVScode.genruntimeconfig.cache
+C:\estágio\ProjetoFinalVScode\obj\Debug\net7.0\ref\ProjetoFinalVScode.dll
