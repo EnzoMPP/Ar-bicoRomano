@@ -3,6 +3,7 @@ internal class Program
 {
     static int RomanoToArabico(string Romano)
     {
+        //Criando Dicionário
         Dictionary<char, int> RomanosArabicos = new Dictionary<char, int>
         {
             {'I', 1},
@@ -15,7 +16,7 @@ internal class Program
         };
 
         int Arabico = 0;
-
+        //Montando o algarismo Romano
         for (int i = 0; i < Romano.Length; i++)
         {
 
@@ -33,11 +34,15 @@ internal class Program
     }
     private static void Main(string[] args)
     {
+        //Criando uma entrada do tipo string para conformar se deseja repetir o processo
         string confirmar;
+        //Iniciando o loop do programa
         do
         {
+            //Solicitando ao usuário a entrada de dados
             Console.WriteLine("Informe o número romano  ou arabico entre 0 e 3999 para conversão: ");
             object variavel = Console.ReadLine() ?? "";
+            //Identificando se a variável é um número ou letras, se for número o objeto é convertido para número real
             for (int i = 0; i < Convert.ToString(variavel).Length; i++)
             {
                 if (Convert.ToString(variavel)[i] >= '0' && Convert.ToString(variavel)[i] <= '9')
@@ -47,9 +52,10 @@ internal class Program
 
             }
 
-
+            //Caso a variável não se ja número, é inicado o processo abaixo
             if (variavel.GetType() == typeof(string) || variavel.GetType() == typeof(char))
             {
+                //Caso a entrada seja em letras minúsculas, o algoritmo converte para maíusculas, e armazena em um stringBuilder
                 StringBuilder maiusculo = new StringBuilder();
                 for (int i = 0; i < Convert.ToString(variavel).Length; i++)
                 {
@@ -65,13 +71,14 @@ internal class Program
 
 
                 }
-
+                // A entrada passa a ser o conteúdo do stringBuilder
                 string Romano = maiusculo.ToString();
 
 
 
                 for (int i = 0; i < Romano.Length; i++)
                 {
+                    //nessa sequência é conferido se as letras digitadas pertence ao dicionário de algarismos romanos
                     while (Romano[i] != 'I' && Romano[i] != 'V' && Romano[i] != 'X' && Romano[i] != 'L' && Romano[i] != 'C' && Romano[i] != 'D' && Romano[i] != 'M' || Romano.Length > 9)
                     {
                         Console.WriteLine("Algarismo romano inexistente, Informe outro: ");
@@ -97,25 +104,29 @@ internal class Program
                     }
 
                 }
+                //Por fim é dada a resposta
                 Console.Write("O número Romano informado, em arábico é: ");
                 Console.Write(RomanoToArabico(Romano));
                 Console.WriteLine("\n");
+                //é perguntado se quer que o processo ocorra novamente
                 Console.WriteLine("Deseja repetir o processo?\nSe sim digite \"Sim\"");
 
 
             }
+            // caso a variável twnha número e seja convertida para double é feito o seguinte processo
             else if (variavel.GetType() == typeof(int) || variavel.GetType() == typeof(double))
             {
+                // são iniciados vetores com os números romanos 
                 string[] unidades = new string[10] { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
                 string[] dezenas = new string[10] { "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
                 string[] centenas = new string[10] { "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
                 string[] milhares = new string[4] { "", "M", "MM", "MMM" };
-
-
+                
+                //O valor é aproximado para o inteiro mais próximo caso seja decimal
                 double valor = Convert.ToDouble(variavel);
                 int valor2 = Convert.ToInt32(Math.Round(valor, 0));
 
-
+                //confere se o número está dentro do intervalo que os algorismos romanos abrangem
                 while (valor > 3999 || valor <= 0)
                 {
                     Console.WriteLine("Informe um valor dentro do intervalo");
@@ -129,11 +140,12 @@ internal class Program
                 Console.Write(unidades[valor2 % 1000 % 100 % 10]);
 
                 Console.WriteLine("\n");
-
+                //é perguntado se quer que o processo ocorra novamente
                 Console.WriteLine("Deseja repetir o processo?\nSe sim digite \"Sim\"");
 
 
             }
+            //usuário escolher se quer continuar
             confirmar = Console.ReadLine();
         } while (confirmar == "SIM" || confirmar == "sim" || confirmar == "Sim");
     }
